@@ -1,0 +1,8 @@
+{
+    "repo_name": "Namespace-Module",
+    "module_name": "{{ cookiecutter.repo_name|replace('-', '::') }}",
+    "author_name": "",
+    "author_email": "",
+    "project_version": "0.01",
+    "copyright_year": "2015"
+}
