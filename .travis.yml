@@ -4,9 +4,16 @@
 ## installed, and pass a basic test suite.
 ##
 language: perl
-python:
-  # TODO: Add additional versions once this is working.
+perl:
   - "5.6"
+  - "5.8"
+  - "5.10"
+  - "5.12"
+  - "5.14"
+  - "5.16"
+  - "5.18"
+  - "5.20"
+  - "5.22"
 
 branches:
   only:
@@ -17,7 +24,7 @@ sudo: false
 
 before_install:
   # Install Cookiecutter and create template project. Because this is a Perl
-  # project, pip needs to install locally.
+  # project, a Python virtualenv is not used, and pip needs to install locally.
   - pip install --requirement=requirements.txt --user
   - cd ..
   - cookiecutter --no-input ${TRAVIS_BUILD_DIR}
@@ -29,5 +36,5 @@ install:
   - ./Build install
 
 script:
-  # Run the template project test suite.
-  - prove  # use installed version
+  # Run the template project test suite on the installed module.
+  - prove t/
