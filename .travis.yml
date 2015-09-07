@@ -5,7 +5,10 @@
 ##
 language: perl
 perl:
-  - "5.6"
+  # FIXME: Builds for 5.6 and 5.22 fail with the following error:
+  #   ERROR: Can't create '/usr/local/man/man3'
+  #   mkdir /usr/local/man/man3: Permission denied at
+  #   /usr/share/perl/5.14/ExtUtils/Install.pm line 494    
   - "5.8"
   - "5.10"
   - "5.12"
@@ -13,7 +16,6 @@ perl:
   - "5.16"
   - "5.18"
   - "5.20"
-  - "5.22"
 
 branches:
   only:
