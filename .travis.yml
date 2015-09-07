@@ -1,0 +1,33 @@
+## Travis CI configuration for the cookiecutter-perl-lib project template.
+##
+## This verifies that a sample project can be created from the template, be
+## installed, and pass a basic test suite.
+##
+language: perl
+python:
+  # TODO: Add additional versions once this is working.
+  - "5.6"
+
+branches:
+  only:
+    - master
+    - dev
+
+sudo: false
+
+before_install:
+  # Install Cookiecutter and create template project. Because this is a Perl
+  # project, pip needs to install locally.
+  - pip install --requirement=requirements.txt --user
+  - cd ..
+  - cookiecutter --no-input ${TRAVIS_BUILD_DIR}
+
+install:
+  # Install template project.
+  - cd Namespace-Module
+  - perl Build.PL
+  - ./Build install
+
+script:
+  # Run the template project test suite.
+  - prove  # use installed version
