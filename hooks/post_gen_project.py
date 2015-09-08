@@ -4,7 +4,6 @@ This is executed in the new project directory. Before execution it is rendered
 with the template engine, so it has access to all template variables.
 
 """
-from os import chdir 
 from os import makedirs
 from os import rename
 from os.path import join
