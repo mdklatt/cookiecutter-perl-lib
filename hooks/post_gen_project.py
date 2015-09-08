@@ -16,7 +16,7 @@ def make_source(repo):
     namespace, module = repo.split("-")
     root = join("lib", namespace)
     makedirs(root)
-    rename("MODFILE.pm", join(root, module + ".pm"))
+    rename(repo + ".pm", join(root, module + ".pm"))
     return
 
 
