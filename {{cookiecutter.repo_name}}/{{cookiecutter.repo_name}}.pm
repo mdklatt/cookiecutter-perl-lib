@@ -97,7 +97,7 @@ L<http://search.cpan.org/dist/{{ cookiecutter.repo_name }}/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2015 {{ cookiecutter.author_name }}.
+Copyright {{ cookiecutter.copyright_year }} {{ cookiecutter.author_name }}.
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of the the Artistic License (2.0). You may obtain a
