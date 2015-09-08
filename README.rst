@@ -4,8 +4,9 @@ Perl Library Project Template
 Overview |travis.png|
 ---------------------
 
-This is a `Cookiecutter`_ template for creating a Perl library project based on 
-the output of `Module::Starter`_.
+This is a `Cookiecutter`_ template for creating a Perl library project, and is
+based on the output of `Module::Starter`_.
+
 
 ..  |travis.png| image:: https://travis-ci.org/mdklatt/cookiecutter-perl-lib.png?branch=master
     :alt: Travis CI build status
@@ -19,9 +20,10 @@ the output of `Module::Starter`_.
 Template Project Features
 -------------------------
 
+* Perl 5
 * `Module::Build`_ package management
 * `Test::Most`_ tests
-* Perl `Artistic license`_
+* `Artistic License`_
 
 
 ..  _Test::Most: http://perldoc.perl.org/Test/More.html
@@ -32,12 +34,18 @@ Template Project Features
 Minimum Requirements
 --------------------
 
-* Python 2.7
-* `Cookiecutter`_ 1.0
+* `Cookiecutter`_ 1.0 (requires Python)
 
 
 Usage
 -----
+
+Install Python requirements for using the template:
+
+..  code-block::
+
+    $ pip install --requirement=requirements.txt --user 
+
 
 Create a new project directly from the template on `GitHub`_:
 
