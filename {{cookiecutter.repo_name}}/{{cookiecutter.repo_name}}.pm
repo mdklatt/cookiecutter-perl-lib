@@ -4,17 +4,30 @@ use 5.006;
 use strict;
 use warnings;
 
+# This project uses Semantic Versioning <http://semver.org>. Major versions
+# introduce significant changes to the API, and backwards compatibility is not
+# guaranteed. Minor versions are for new features and backwards-compatible
+# changes to the API. Patch versions are for bug fixes and internal code
+# changes that do not affect the API. Version 0.x should be considered a
+# development version with an unstable API, and backwards compatibility is not
+# guaranteed for minor versions.
+#
+# David Golden's recommendations for version numbers <http://bit.ly/1g8EbKi> 
+# are used, e.g. v0.1.2 is "0.001002" and v1.2.3dev4 is "1.002002_004".
+
+our $VERSION = '{{ cookiecutter.project_version }}';
+$VERSION = eval $VERSION;  # runtime conversion to numeric value
+
+
 =head1 NAME
 
 {{ cookiecutter.module_name }} - The great new {{ cookiecutter.module_name }}!
 
 =head1 VERSION
 
-Version 0.01
+Version {{ cookiecutter.project_version }}
 
 =cut
-
-our $VERSION = '0.01';
 
 
 =head1 SYNOPSIS

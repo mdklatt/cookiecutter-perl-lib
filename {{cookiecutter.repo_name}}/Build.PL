@@ -9,7 +9,7 @@ my $builder = Module::Build->new(
     license             => 'artistic_2',
     dist_author         => q{ {{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>},
     dist_version_from   => 'lib/{{ modfile }}',
-    release_status      => 'stable',
+    release_status      => 'unstable',
     configure_requires => {
         'Module::Build' => 0,
     },
